@@ -1,0 +1,101 @@
+html, 
+
+.container {
+    max-width: 700px;   
+    background: #fff;
+    margin: 0px auto 0px; 
+    box-shadow: 1px 1px 2px #DAD7D7;
+    border-radius: 3px;  
+    padding: 40px;
+    margin-top: 50px;
+  }
+  body {
+    min-height: 100%;  
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #222;
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 50px;
+  }
+    p{
+    text-align: justify;
+    }
+    #box{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    }
+    #header{
+    background-color: #dfd5d5;
+    padding: 20px;
+    }
+    .position {
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 10px;
+      text-decoration: underline;
+    }
+    #menubar{
+    background-color: #e4e4e4;
+    margin: auto;
+    }
+    #menubar a{
+        color: #000000;
+    }
+    .teksmenu{
+    text-decoration: none;
+    color: #999494;
+    }
+    #konten{
+    padding: 20px;
+    background-color: #a9ddff;
+    }
+    
+    #footer{
+    background-color: #999494;
+    }
+    
+    .details {
+        line-height: 20px;
+    }
+        
+        .section {
+          margin-bottom: 40px;  
+        }
+        
+        .section:last-of-type {
+          margin-bottom: 0px;  
+        }
+        
+        .section__title {
+          letter-spacing: 2px;
+          color: #54AFE4;
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+        }
+        
+        .section__list-item {
+          margin-bottom: 40px;
+        }
+        
+        .section__list-item:last-of-type {
+          margin-bottom: 0;
+        }
+        
+        .left ,
+        .right {
+          vertical-align: top;
+          display: inline-block;
+        }
+        
+        .left {
+          width: 60%;    
+        }
+        
+        .right {
+          tex-align: right;
+          width: 39%;    
+        }

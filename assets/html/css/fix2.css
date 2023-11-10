@@ -1,0 +1,373 @@
+/* Reset dan aturan box-sizing */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* Style HTML dasar */
+html {
+  font-family: sans-serif;
+}
+
+/* Aturan Reset dan style untuk elemen umum */
+a, body, div, footer, h1, h2, h3, h4, h5, h6, header, html, li, nav, p, section, span, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+/* Hapus tampilan outline pada tautan aktif dan hover */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* Menentukan blok elemen */
+footer, header, main, nav, section {
+  display: block;
+}
+
+/* Container dengan max-width dan padding */
+.container {
+  margin: auto;
+  max-width: 662px;
+  padding: 0 20px;
+}
+
+
+
+/* Style untuk tubuh halaman */
+body {
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+  font-size: 0.9375em;
+  line-height: 1.65em;
+  background: #fff;
+  color: #222;
+}
+
+
+/* Style Heading */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+  font-weight: 700;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  margin: 0 0 0.5em 0;
+}
+
+/* Atur tinggi baris untuk tingkatan heading */
+.h1, .h2, h1, h2 {
+  line-height: 1.1;
+}
+
+.h3, .h4, h3, h4 {
+  line-height: 1.3;
+}
+
+/* Tentukan ukuran font untuk tingkatan heading */
+h1, h1 {
+  font-size: 2.25em;
+}
+
+h2, h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.7em;
+}
+
+h3, h3 {
+  font-size: 1.3125em;
+}
+
+h4, h4 {
+  font-size: 1.125em;
+}
+
+h5, h5 {
+  font-size: 1em;
+}
+
+h6, h6 {
+  font-size: 0.75em;
+  text-transform: uppercase;
+}
+
+
+
+/* Add margin to paragraphs and lists */
+p, ul {
+  margin-bottom: 1.65em;
+}
+
+/* Style tulisan miring */
+i {
+  font-style: italic;
+}
+
+/* Container kartu dan style kartu */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Style untuk judul kartu */
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+/* Style tombol */
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+/* Style tautan dan tombol saat dihover */
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+}
+
+a:hover, button:hover {
+  opacity: 0.7;
+}
+
+/* Style navigasi utama */
+.main-nav {
+  background: #f4f4f4;
+  padding-top: 23px;
+}
+
+/* Style tautan navigasi */
+.main-nav nav ul li a {
+  color: #a7a7a7;
+}
+
+/* Style tautan navigasi aktif */
+.main-nav nav ul li.active a {
+  color: #4d4d4d;
+}
+
+/* Style navbar */
+.navbar {
+  font-size: 105%;
+  margin-bottom: 1.65em;
+}
+
+/* Hapus float untuk navbar */
+.navbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hapus float untuk elemen ul bersarang */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+}
+
+
+/* Float untuk item navigasi dan tambahkan margin */
+.navbar li {
+  float: left;
+  margin-right: 1.65em;
+}
+
+
+/* Hapus float untuk grup */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media query untuk layar yang lebih besar */
+@media (min-width: 768px) and (max-width: 979px) {
+  h1 {
+    font-size: 2.25em;
+    line-height: 1.125;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.3125em;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.25em;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.15384615;
+  }
+
+  h3 {
+    font-size: 1.3125em;
+    line-height: 1.13636364;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.11111111;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.75em;
+  }
+}
+
+/* Media query untuk layar sangat kecil */
+@media only screen and (max-width: 767px) {
+  /* Hapus float dan sesuaikan penataan teks untuk elemen navbar */
+  .navbar li {
+    float: none;
+    text-align: left;
+    width: auto;
+  }
+
+  /* Hapus margin untuk elemen navbar */
+  .navbar li {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Style heading untuk berbagai ukuran */
+.h1, h1 {
+  font-size: 36pt;
+}
+
+.h2, h2 {
+  font-size: 24pt;
+}
+
+.h3, h3 {
+  font-size: 18pt;
+}
+
+.h4, h4 {
+  font-size: 14pt;
+}
+
+.h5, h5 {
+  font-size: 12pt;
+}
+
+.h6, h6 {
+  font-size: 12pt;
+}
+
+/* Style responsif untuk gambar */
+img {
+  max-width: 100% !important;
+}
+
+/* Style heading dengan font dan warna tertentu */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display SC", serif;
+  color: #333;
+}
+
+/* Style untuk tautan, item daftar, dan paragraf */
+a, li, p {
+  font-family: Lato, Arial, sans-serif;
+  color: #4e4e4e;
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+/* Style saat tautan dihover */
+a:hover {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+/* Style tambahan untuk bagian khusus */
+.section.second {
+  margin-bottom: 90px;
+}
+
+/* Style container dalam sebuah bagian */
+.section .container {
+  position: relative;
+}
+
+/* Style untuk judul bagian khusus */
+.section .container h1 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Style untuk bagian intro */
+.intro {
+  padding: 95px 0 70px 0;
+  overflow-x: hidden;
+}
+
+/* Style untuk elemen wrap dalam bagian intro */
+.intro .wrap {
+  margin: 30px 0;
+}
+
+/* Pseudo-element untuk elemen h1 dalam bagian intro */
+.intro h1:before {
+  position: absolute;
+  left: -220px;
+  top: -150px;
+  font-size: 270px;
+  z-index: -1;
+  color: #f4f4f4;
+}
+
+/* Style footer */
+footer {
+  padding: 50px 0 0 0;
+}
