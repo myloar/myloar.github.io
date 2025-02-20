@@ -66,30 +66,15 @@ if analysis_type == 'Prediksi Harian':
                      color_discrete_map={'Real': 'blue', 'Prediksi': 'red'})
         st.plotly_chart(fig, use_container_width=True)
         
-    with tab2:
-        col1, col2 = st.columns([3,1])
-        with col1:
-            fig = go.Figure()
-            fig.add_trace(go.Scatter(x=filtered['Date'], y=filtered['Close'],
-                                    mode='lines', name='Harga'))
-            fig.add_vline(x=pd.to_datetime('2025-01-10'), line_dash="dash",
-                         line_color="black", name='Tanggal Kebakaran')
-            fig.update_layout(title='Dampak Kebakaran pada Harga Harian',
-                            xaxis_title='Tanggal', yaxis_title='Harga')
-            st.plotly_chart(fig, use_container_width=True)
-        
-        with col2:
-            st.metric("Harga 1 Minggu Sebelum", "65.25")
-            st.metric("Harga 1 Minggu Sesudah", "48.63")
-            st.metric("Penurunan (%)", "-25.47%")
+        # Tambahan informasi di bawah visualisasi
+        st.markdown("""
+        **Analisis Tren:**
+        - Sebelum kebakaran, harga saham relatif stabil di sekitar **65.25 USD**.
+        - Setelah kebakaran terjadi pada **10 Januari 2025**, harga turun tajam hingga **48.63 USD**, mengalami penurunan sekitar **25.47%**.
+        - Pemulihan harga saham masih belum terlihat dalam data historis yang ada.
+        - Investor tampaknya merespons negatif terhadap kejadian ini, mencerminkan sentimen pasar yang pesimis.
+        """)
     
-    with tab3:
-        st.subheader("Evaluasi Model SARIMAX Harian")
-        col1, col2, col3 = st.columns(3)
-        col1.metric("RMSE", "2.79")
-        col2.metric("MAE", "1.74")
-        col3.metric("R²", "-0.042")
-        
 elif analysis_type == 'Prediksi Dengan Faktor Volume':
     filtered = date_filter(daily_volume)
     
@@ -103,19 +88,13 @@ elif analysis_type == 'Prediksi Dengan Faktor Volume':
                      color_discrete_map={'Real': 'blue', 'Prediksi': 'red'})
         st.plotly_chart(fig, use_container_width=True)
         
-    with tab2:
-        st.subheader("Perbandingan Model dengan dan Tanpa Volume")
-        st.write("""
-        **Insights:**
-        - Model dengan variabel volume menunjukkan akurasi yang lebih tinggi
-        - RMSE model dengan volume: 2.02 (vs 2.79 tanpa volume)
-        - R² model dengan volume: 0.082 (vs -0.042 tanpa volume)
+        # Tambahan informasi di bawah visualisasi
+        st.markdown("""
+        **Analisis Tren dengan Volume:**
+        - Volume transaksi meningkat signifikan setelah kebakaran, mengindikasikan aksi jual besar-besaran.
+        - Harga saham tetap mengalami penurunan meskipun volume tinggi, menunjukkan dominasi tekanan jual.
+        - Model dengan volume menunjukkan akurasi lebih baik karena mempertimbangkan faktor reaksi pasar yang lebih kompleks.
         """)
-        
-        col1, col2, col3 = st.columns(3)
-        col1.metric("RMSE (Dengan Volume)", "2.02")
-        col2.metric("MAE (Dengan Volume)", "1.23")
-        col3.metric("R² (Dengan Volume)", "0.082")
 
 # Bagian umum untuk semua analisis
 st.sidebar.divider()
@@ -130,6 +109,6 @@ st.sidebar.download_button(
 st.markdown("""
 ---
 **Interpretasi Hasil:**
-1. Pola penurunan signifikan pasca kebakaran terlihat jelas pada data harian
-2. Model dengan variabel tambahan menunjukkan akurasi lebih tinggi
+1. Pola penurunan signifikan pasca kebakaran terlihat jelas pada data harian.
+2. Model dengan variabel tambahan (volume) menunjukkan akurasi lebih tinggi.
 """)
